@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.controller.MainController"
+            stylesheets="@style.css"
+            prefHeight="500.0" prefWidth="800.0">
+
+
+    <!-- Header -->
+    <Label layoutX="20" layoutY="20" text="📈 Stock Prediction Dashboard"
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+
+    <!-- Dashboard Cards -->
+    <HBox layoutX="20" layoutY="70" spacing="20">
+        <VBox styleClass="card" prefWidth="200" prefHeight="100">
+            <Label text="Total Stocks" styleClass="card-title"/>
+            <Label text="🔢 15" styleClass="card-value"/>
+        </VBox>
+
+        <VBox styleClass="card" prefWidth="200" prefHeight="100">
+            <Label text="Last Prediction" styleClass="card-title"/>
+            <Label text="📉 ₹235.78" styleClass="card-value"/>
+        </VBox>
+
+        <VBox styleClass="card" prefWidth="200" prefHeight="100">
+            <Label text="Last Updated" styleClass="card-title"/>
+            <Label text="🕒 Today" styleClass="card-value"/>
+        </VBox>
+    </HBox>
+
+    <!-- Navigation Buttons -->
+    <VBox layoutX="600" layoutY="200" spacing="15">
+        <Button fx:id="addButton" text="➕ Add Stock" prefWidth="150" onAction="#onAddStock"/>
+        <Button text="📋 View Stocks" prefWidth="150" onAction="#onViewStocks"/>
+        <Button text="🔮 Predict Price" prefWidth="150" onAction="#onPredict"/>
+        <Button fx:id="exitButton" text="🚪 Exit" prefWidth="150" onAction="#onExit"/>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.controller.AddStockController"
+            stylesheets="@style.css"
+            prefHeight="400.0" prefWidth="600.0">
+
+
+    <Label layoutX="20" layoutY="20" text="➕ Add New Stock"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <VBox layoutX="50" layoutY="70" spacing="10" styleClass="card" prefWidth="500">
+        <Label text="Stock Symbol:"/>
+        <TextField fx:id="symbolField" promptText="e.g., INFY"/>
+
+        <Label text="Stock Name:"/>
+        <TextField fx:id="nameField" promptText="e.g., Infosys"/>
+
+        <Button text="➕ Add" onAction="#handleAddStock"/>
+        <Label fx:id="statusLabel"/>
+    </VBox>
+
+    <HBox layoutX="50" layoutY="320" spacing="20">
+        <Button text="🏠 Home" onAction="#onGoHome"/>
+        <Button text="📋 View Stocks" onAction="#onGoStocks"/>
+    </HBox>
+
+</AnchorPane>

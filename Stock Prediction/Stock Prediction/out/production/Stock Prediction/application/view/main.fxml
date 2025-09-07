@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="application.controller.MainController">
+    <Label fx:id="titleLabel" text="Stock Prediction System" style="-fx-font-size: 20px;" />
+    <Button fx:id="loadButton" text="Load Stocks" onAction="#onLoadData" />
+    <Button text="Add New Stock" onAction="#openAddStockWindow" />
+    <Button text="Predict Stock" onAction="#openPredictionWindow" />
+    <ListView fx:id="stockListView" prefWidth="300" prefHeight="200" />
+</VBox>

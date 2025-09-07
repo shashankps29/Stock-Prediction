@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="application.controller.AddStockController">
+    <Label text="Add New Stock" style="-fx-font-size: 18px;" />
+
+    <TextField fx:id="symbolField" promptText="Stock Symbol" />
+    <TextField fx:id="nameField" promptText="Stock Name" />
+
+    <Button text="Add Stock" onAction="#handleAddStock" />
+
+    <Label fx:id="statusLabel" />
+</VBox>

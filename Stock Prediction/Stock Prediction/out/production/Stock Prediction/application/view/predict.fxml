@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="application.controller.PredictController">
+
+    <Label text="Stock Price Prediction" style="-fx-font-size: 18px;" />
+
+    <!-- Input field for stock symbol -->
+    <TextField fx:id="symbolInput" promptText="Enter Stock Symbol" />
+
+    <!-- Predict button -->
+    <Button text="Predict Price" onAction="#handlePrediction" />
+
+    <!-- Predicted price output -->
+    <Label fx:id="predictionResult" style="-fx-font-size: 14px;" />
+
+    <!-- LineChart to display predicted series -->
+    <LineChart fx:id="lineChart" prefWidth="600" prefHeight="300">
+        <xAxis>
+            <CategoryAxis label="Days" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="Price" />
+        </yAxis>
+    </LineChart>
+
+</VBox>

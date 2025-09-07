@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.controller.MainController"
+            stylesheets="@style.css"
+            prefHeight="400.0" prefWidth="700.0">
+
+
+    <Label layoutX="20" layoutY="20" text="📋 Stock List"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="stockTable" layoutX="50" layoutY="70" prefHeight="250" prefWidth="600" styleClass="card">
+        <columns>
+            <TableColumn fx:id="nameCol" text="Stock Name" prefWidth="200"/>
+            <TableColumn fx:id="dateCol" text="Date" prefWidth="200"/>
+            <TableColumn fx:id="priceCol" text="Closing Price" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+    <Button layoutX="50" layoutY="340" text="📥 Load Stocks" onAction="#onLoadData"/>
+    <Button layoutX="160" layoutY="340" text="🏠 Home" onAction="#onGoHome"/>
+
+</AnchorPane>
