@@ -36,10 +36,7 @@ application/
 
 Getting Started
 
-Clone the repository:
 
-git clone https://github.com/your-username/stock-prediction-system.git
-cd stock-prediction-system
 
 
 Set up SQLite (the table initializes automatically with SQLiteInitializer).
